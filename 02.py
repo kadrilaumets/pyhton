@@ -52,5 +52,4 @@ t.color("green")
 t.pensize(6)
 t.circle(50,360)
 
-
 turtle.done()
