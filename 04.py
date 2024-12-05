@@ -13,12 +13,16 @@
 # Kasutaja sisestab: 23
 # Programm väljastab: Saad teha 4 täis kinkekasti. Üle jääb 3 kingitust.
 
-karbi_suurus = 5
-kingitused = int(input("Lisa kingituste arv: "))
-kastid = kingitused//karbi_suurus
-jaak = kingitused%karbi_suurus
-print(f"Saad teha {kastid} täis kinkekasti. Üle jääb {jaak} kingitust.")
-
+try:
+    karbi_suurus = 5
+    kingitused = int(input("Lisa kingituste arv: "))
+    kastid = kingitused//karbi_suurus
+    jaak = kingitused%karbi_suurus
+    print(f"Saad teha {kastid} täis kinkekasti. Üle jääb {jaak} kingitust.")
+except:
+    print("Jälle probleem!")
+    
+    
 
 
 
