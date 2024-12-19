@@ -25,30 +25,50 @@ Näiteks, programm esitab küsimuse “Mis on 3 korda 4?”. Kasutaja peab sises
 Kasuta if ja else lauseid selleks, et kontrollida kasutaja sisestatud vastust.
 """
 import random
-
-try:
-    arv1 = random.randint(1,10)
-    arv2 = random.randint(1,10)
-    vastus = int(input(f"{arv1}*{arv2}="))
-    
-except:
-    print("Viga sisestuses!")
-
-
-
-
-
-
-
-
-
-
-
-
+import turtle
+# 
+# try:
+#     arv1 = random.randint(1,10)
+#     arv2 = random.randint(1,10)
+#     vastus = int(input(f"Mis on {arv1} * {arv2} vastus?\nSisesta vastus: "))
+#     korrutis = arv1 * arv2
+#     
+#     if korrutis == vastus:
+#         print("Õige vastus!")
+#     else:
+#         print("Vale vastus!")
+#     
+# except:
+#     print("Viga sisestuses!")
 
 """
 Mündiviskamise äraarvamine koos juhuslikkusega (and ja or)
+0 = kiri  1 = kull
 Kirjuta programm, mis simuleerib mündiviskamist. Programm genereerib juhusliku tulemuse – “kiri” või “kull”, kasutades random.randint(0,1) funktsiooni. Programmi koostamisel pead importima import random mooduli ja kasutama randint() funktsiooni, et valida kahe võimaliku tulemuse vahel. Näiteks, kui randint(0, 1) annab tulemuseks 0, siis võib see tähendada “kirja”, ja 1 võib tähendada “kulli”.
 Seejärel palub programm kasutajal arvata, kumb külg maandub ülespoole.
 Kasuta if lauset, et kontrollida, kas kasutaja arvas õigesti. Kui arvas õigesti, siis joonista Turtle abil roheline ring; kui valesti, siis punane ring.
 """
+
+
+try:
+    tulemus = random.randint(0,1)
+    arvamus = int(input("Vali kull 1 või kiri 0: "))
+    if tulemus == arvamus:
+        print("Arvasid ära!")
+        turtle.color("green")
+        turtle.circle(50)
+        
+    else:
+        print("Arvasid valesti")
+        turtle.color("red")
+        turtle.circle(50)
+    turtle.done() 
+except:
+    print("Viga sisestuses!")
+    
+
+
+
+
+
+
