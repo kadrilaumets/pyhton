@@ -4,11 +4,11 @@ def konto_haldur(algne_saldo, toiming, summa):
         algne_saldo += summa
     elif toiming == 'valjavote':
         if summa > algne_saldo:
-            return "Kontol ple piisavalt raha."
-        algne_saldo -= summa
+            print("Kontol ple piisavalt raha.")
+        else:
+            algne_saldo -= summa
     else:
         print("Viga")
-    
     return algne_saldo
 
 saldo = 100
