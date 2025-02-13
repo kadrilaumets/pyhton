@@ -25,3 +25,8 @@ if os.path.exists(kp+"/"+str(kustuta)):
     print(f"{kustuta} kataloog kustutatud")
 else:
     print(f"{kustuta} kataloogi ei leitud")
+
+dir_list = os.listdir(kp)
+print("Kataloogi sisu: ")
+for i in dir_list:
+    print (i)
