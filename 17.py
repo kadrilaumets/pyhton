@@ -22,9 +22,14 @@
 # print(f"Positiivsete arvude summa: {pos_arv_summa:.2f}")
 
 #17.2
-
+mpalgad = 0
 with open("palgad.txt") as fail:
     sisu = fail.readlines()
     for i in sisu:
-        
+        tykeldus = i.split(",")
+        if tykeldus[3] == "Mees":
+            mpalgad+=float(tykeldus[6])
+            
+print(f"Meeste palgad: {mpalgad:.2f}")
+
 
