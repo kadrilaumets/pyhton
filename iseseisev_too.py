@@ -6,8 +6,8 @@ import statistics
 url = "https://www.metshein.com/kordamine/json/autod.json"
 response = requests.get(url)
 data=response.json()
-#print(data)
 
+#https://stackoverflow.com/questions/35567177/python-using-min-to-find-min-value-in-json-object
 
 #kõige odavam ja kõige kallim
 odav_hind = min(hind["hind"] for hind in data["autod"])
@@ -34,6 +34,7 @@ for auto in data["autod"]:
         autod.append(auto["mark"]+" "+auto["mudel"])
 
 print(f"Autod, mille hind jääb alla 10000 on: {autod}")
+
 
 
 
